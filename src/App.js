@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import style from './App.css';
 import List from './List';
 import Button from './Button';
@@ -28,6 +27,9 @@ export default class App extends Component {
   render() {
     return (
       <div className={style.app}>
+      <header className={style.appHeader}>
+      <h1 className={style.appTitle}>Welcome to(do)</h1>
+      </header>
        <form  onSubmit={this.onSubmit}>
           <EnterTask term={this.state.term} par={this}/>
            <Button />
