@@ -24,5 +24,11 @@
   .btn {
     margin-left: 20px;
   }
+  .register {
+    position: absolute; 
+    right: 0;
+    margin-right: 15px;
+  }
+
 
  

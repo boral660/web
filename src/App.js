@@ -3,6 +3,8 @@ import style from './App.css';
 import List from './List';
 import Button from './Button';
 import EnterTask from "./EnterTask";
+import LogIn from "./LogIn"
+
 
 export default class App extends Component {
   constructor(props) {
@@ -18,7 +20,7 @@ export default class App extends Component {
     if(this.state.term != ''){
     this.setState({
       term: '',
-      items: [...this.state.items, this.state.term]
+      items: [this.state.term,...this.state.items]
     });
   }
     
@@ -30,8 +32,9 @@ export default class App extends Component {
       <header className={style.appHeader}>
       <h1 className={style.appTitle}>Welcome to(do)</h1>
       </header>
-       <form  onSubmit={this.onSubmit}>
-          <EnterTask term={this.state.term} par={this}/>
+      <LogIn />
+       <form onSubmit={this.onSubmit} style={{marginTop: 15}}>
+          <EnterTask term={this.state.term} par={this}  />
            <Button />
         </form>
         <List  app={this}/>
